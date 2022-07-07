@@ -1,13 +1,12 @@
-
 import './App.css';
-import Card from './components/Card';
-import './img/background.png';
+import TodayWeather from './components/app/TodayWeather';
+import WeatherDetails from './components/app/WeatherDetails';
 
 export default function App() {
   return (
     <div className="App">
-      <Card />
-      <footer>coded by Dany Sánchez </footer>
+      <TodayWeather />
+      <WeatherDetails />
     </div>
   );
 }

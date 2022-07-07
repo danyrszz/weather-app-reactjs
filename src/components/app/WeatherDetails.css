@@ -1,0 +1,33 @@
+.weather-details{
+  display: flex;
+  flex-direction: column;
+  background: #100E1D;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  /* justify-content: space-between; */
+}
+.conversion-bar button{
+  display: inline-block;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+}
+.conversion-bar{
+  display: flex;
+  justify-content: flex-end;
+}
+.weekly-weather{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 40px 0;
+  border:solid 1px red;
+}
+.highlights{
+  border:solid 1px red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: fit-content;
+}

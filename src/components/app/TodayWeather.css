@@ -1,0 +1,49 @@
+.today-weather-container{
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.today-weather-bar{
+  display: flex;
+  justify-content: space-between;
+  padding: .8rem;
+}
+.general-button{
+  border: none;
+  padding: 0 0.8rem;
+  cursor: pointer;
+  background: #6E707A;
+  color: white;
+}
+.button-rounded{
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6E707A;
+  color: white;
+}
+.today-icon{
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+.today-icon::after{
+  content:"";
+  background: url("../../assets/Cloud-background.png") no-repeat;
+  background-size: 170%;
+  background-position: center;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* .today-icon{
+  height: 40%;
+} */
