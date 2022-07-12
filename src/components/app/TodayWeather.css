@@ -31,6 +31,9 @@
   place-content: center;
   position: relative;
 }
+.today-icon img{
+  max-width: 100%;
+}
 .today-icon::after{
   content:"";
   background: url("../../assets/Cloud-background.png") no-repeat;
@@ -43,7 +46,3 @@
   bottom: 0;
   right: 0;
 }
-
-/* .today-icon{
-  height: 40%;
-} */

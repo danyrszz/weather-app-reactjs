@@ -21,44 +21,45 @@ export default function WeatherDetails(){
       </section>
 
       <section className='weekly-weather'>
-        <WeatherCard></WeatherCard>
-        <WeatherCard></WeatherCard>
-        <WeatherCard></WeatherCard>
-        <WeatherCard></WeatherCard>
-        <WeatherCard></WeatherCard>
-        <WeatherCard></WeatherCard>
+        <WeatherCard icon='clear-day'></WeatherCard>
+        <WeatherCard icon='clear-day'></WeatherCard>
+        <WeatherCard icon='clear-day'></WeatherCard>
+        <WeatherCard icon='clear-day'></WeatherCard>
+        <WeatherCard icon='clear-day'></WeatherCard>
+        <WeatherCard icon='clear-day'></WeatherCard>
       </section>
 
 
       <h1>Today's highlights </h1>
-      <section className='highlights'> 
-        <HighlightCard
-          title = "Wind Status"
-          value = {2}
-          metric = "mph"
-          wind = "N"
-        />
-        <HighlightCard
-          title = "Wind Status"
-          value = {2}
-          metric = "mph"
-          wind = "N"
-        />
-        <HighlightCard
-          title = "Wind Status"
-          value = {2}
-          metric = "mph"
-          wind = "N"
-        />
-        <HighlightCard
-          title = "Wind Status"
-          value = {2}
-          metric = "mph"
-          wind = "N"
-        />
+      <section className='highlights'>
+        <div className='highlights-wrapper'>
+          <HighlightCard
+            title = "Wind Status"
+            value = {2}
+            metric = "mph"
+            wind = "N"
+          />
+          <HighlightCard
+            title = "Humidity"
+            value = {66}
+            metric = "%"
+          />
+          <HighlightCard
+            title = "Wind Status"
+            value = {2}
+            metric = "mph"
+            wind = "N"
+          />
+          <HighlightCard
+            title = "Wind Status"
+            value = {2}
+            metric = "mph"
+            wind = "N"
+          />
+        </div>
       </section>
 
-      <footer className='a'> footer info goes here </footer>
+      <footer className='a'> Coded by Dany Sanchez, for devchallenges.io </footer>
     </section>
 
   )

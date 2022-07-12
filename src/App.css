@@ -2,10 +2,11 @@
 .App{
   background-color: #1E213A;
   display: flex;
+  position: relative;
 }
 .today-weather-container{
-  width:35%;
-  min-width: 280px;
+  /* width:35%; */
+  min-width: 300px;
   max-width: 340px;
 }
 .weather-details{
@@ -14,7 +15,10 @@
   color: white;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 750px) {
+  .search-panel{
+    background-color: yellow;
+  }
   .App{
     flex-direction: column;
   }
@@ -24,6 +28,3 @@
     max-width: 100%;
   }
 }
-
-
-

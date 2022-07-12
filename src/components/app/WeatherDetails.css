@@ -4,7 +4,7 @@
   background: #100E1D;
   padding-left: 4rem;
   padding-right: 4rem;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 .conversion-bar button{
   display: inline-block;
@@ -22,12 +22,35 @@
   gap: 25px;
   justify-content: center;
   padding: 40px 0;
-  border:solid 1px red;
 }
 .highlights{
-  border:solid 1px red;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  width: fit-content;
+  display: flex;
+  justify-content: center;
+}
+.highlights-wrapper{
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  justify-content: center;
+}
+
+footer{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 750px) {
+  .weather-details{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .weather-card{
+    width: 120px;
+    height: 177px;
+  }
 }
