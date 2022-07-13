@@ -5,7 +5,7 @@ export default function HighlightCard({title,value, metric, wind}){
     if(title==="Wind Status"){
       return(
         <div>
-          <span class="material-symbols-outlined ">
+          <span className="material-symbols-outlined ">
           navigation
           </span>
           <span>{wind}</span>       

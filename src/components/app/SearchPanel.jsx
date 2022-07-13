@@ -54,14 +54,14 @@ export default function SearchPanel({show, hide}){
     <section className={"today-weather-container search-panel "+ toggleVisible()}>
       <nav>
         <button onClick={hide} className='general-button button-rounded'> 
-          <span class="material-symbols-outlined">cancel</span>
+          <span className="material-symbols-outlined">cancel</span>
         </button>
       </nav>
 
       <section className='search-bar'>
           <div className='searchbox'>
               <label htmlFor="search">
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                 search
                 </span>
               </label>

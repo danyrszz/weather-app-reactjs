@@ -13,7 +13,7 @@ export default function WeatherInfo (){
         </div>
         
         <div className='location'>
-          <span class="material-symbols-outlined">
+          <span className="material-symbols-outlined">
           pin_drop
           </span>
           <span> Hellzacoalcos </span>
