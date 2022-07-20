@@ -15,6 +15,7 @@
 .conversion-bar{
   display: flex;
   justify-content: flex-end;
+  font-weight: bolder;
 }
 .weekly-weather{
   display: flex;
@@ -33,6 +34,12 @@
   flex-wrap: wrap;
   max-width: 800px;
   justify-content: center;
+}
+
+.temp-unit-button-selected{
+  background: #E7E7EB;
+  color: #100E1D;
+
 }
 
 footer{

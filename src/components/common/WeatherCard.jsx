@@ -1,12 +1,14 @@
-import './WeatherCard.css'
-export default function WeatherCard({icon}){
-  return(
+import './WeatherCard.css';
+import { transformDate } from '../../utils/getDate';
+
+export default function WeatherCard({data}){
+    return(
     <section className="weather-card">
-      <p> Tomorrow </p>
-      <img src={require(`../../assets/${icon}.png`)} alt="Current Weather" className='current-weather' />      
+      <p> {transformDate(data.datetime)} </p>
+      <img src={require(`../../assets/${data.icon}.png`)} alt="Current Weather" className='current-weather' />      
       <div className='weather-card-temp'>
-        <span className="max-temp">22º</span>
-        <span className="min-temp">15º</span>
+        <span className="max-temp">{Math.round(data.tempmax)}º</span>
+        <span className="min-temp">{Math.round(data.tempmin)}º</span>
       </div>
     </section>
   )

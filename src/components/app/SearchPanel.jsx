@@ -1,8 +1,7 @@
 import './SearchPanel.css';
 import { useState, useRef } from 'react';
 
-export default function SearchPanel({show, hide}){ 
-  const [location, setLocation] = useState ({});
+export default function SearchPanel({show, hide, updateLocation}){ 
   const [searchBoxValue, setSearchBoxValue] = useState("");
   const [resultsList, setResultsList] = useState ([]);
   
@@ -39,14 +38,17 @@ export default function SearchPanel({show, hide}){
     }
   }
 
+  const handleKeyPress = (event) => {
+    if(event.key === 'Enter'){
+      handleSearch()
+    }
+  }
+
   function setCoordinates (element){
-    setLocation({
-      latitude : element.latitude,
-      longitude : element.longitude
-    })
     setSearchBoxValue('');
     setResultsList([]);
     hide();
+    updateLocation(element);
     searchBoxRef.current.value = "";
   }
 
@@ -71,9 +73,10 @@ export default function SearchPanel({show, hide}){
                 placeholder='Search a location' 
                 onChange={(e)=>setSearchBoxValue(e.target.value)}
                 ref={searchBoxRef}
+                onKeyDown={handleKeyPress}
               />
           </div>       
-          <button onClick={handleSearch}>Search</button>
+          <button onClick={handleSearch} >Search</button>
       </section>
       <ul className="city-list">
         {resultsList.map((element, index)=>{

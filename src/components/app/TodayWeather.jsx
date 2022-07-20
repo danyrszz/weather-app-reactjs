@@ -1,8 +1,6 @@
 import './TodayWeather.css';
-import WeatherInfo from '../WeatherInfo';
 
-export default function TodayWeather({showSearchPanel}){
-
+export default function TodayWeather({showSearchPanel, giveCoordinates, children}){
 
   return(
     <div className="today-weather-container">
@@ -10,19 +8,18 @@ export default function TodayWeather({showSearchPanel}){
         <button className='general-button' onClick={showSearchPanel}> 
           Search for places
         </button>
-        <button className='general-button button-rounded'>
+        <button className='general-button button-rounded' onClick={giveCoordinates}>
           <span className="material-symbols-outlined">
           my_location
           </span>
-        </button>
+        </button> 
       </nav>
 
       <section className='today-icon'>
-        <img src={require('../../assets/wind.png')} alt="Current Weather" className='current-weather' />
+        <img src={require(`../../assets/${children[0]}.png`)} alt="Current Weather" className='current-weather' />
       </section>
 
-      <WeatherInfo></WeatherInfo>
-
+      {children[1]}
 
     </div>
   )

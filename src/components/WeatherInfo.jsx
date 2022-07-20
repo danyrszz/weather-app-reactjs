@@ -1,25 +1,36 @@
 import './WeatherInfo.css';
-export default function WeatherInfo (){
+import {getToday} from '../utils/getDate';
+
+export default function WeatherInfo ({place, weatherData}){
+
   return (
     <section className="weather-info">
       <div>
-        <span className='degrees'>85</span> <span className='temp-unit'>ºC</span>
+        <span className='degrees'>
+          {Object.keys(weatherData).length === 0 ? '-' : Math.round(weatherData.currentConditions.temp) }
+        </span> 
+        <span className='temp-unit'> ºC </span>
       </div>
 
       <div className='general-information'>
-        <h3>Shower</h3>
+        <h3>
+          {Object.keys(weatherData).length === 0 ? '-' : weatherData.currentConditions.conditions}
+        </h3>
         <div>
-          <span> Today • Mon 05 Jul</span>
+          <span> Today • {getToday()} </span>
+        </div>
+
+        <div>
+          <span> Realfeel • {Object.keys(weatherData).length === 0 ? '-' : Math.round(weatherData.currentConditions.feelslike) + 'º'} </span>
         </div>
         
         <div className='location'>
           <span className="material-symbols-outlined">
           pin_drop
           </span>
-          <span> Hellzacoalcos </span>
+          <span> {place} </span>
         </div>
       </div>
-
 
     </section>
   )

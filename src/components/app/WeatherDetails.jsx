@@ -1,18 +1,25 @@
 import './WeatherDetails.css';
-import WeatherCard from '../common/WeatherCard';
 import HighlightCard from '../common/HighlightCard';
-export default function WeatherDetails(){
+
+export default function WeatherDetails({children, data, tempUnit, changeUnit}){
+
   return(
     <section className='weather-details'>
       
       <section> 
         <nav className='conversion-bar'> 
-          <button className='button-rounded '>
+          <button
+          value = {'celsius'} 
+          className={`button-rounded ${tempUnit==='celsius'? 'temp-unit-button-selected' : ''}`}
+          onClick={()=> changeUnit('celsius')}>
             <span>
             ºC
             </span>
           </button>
-          <button className='button-rounded'>
+          <button
+          value = {'farenheit'}
+          className={`button-rounded ${tempUnit==='farenheit'? 'temp-unit-button-selected' : ''}`}
+          onClick={()=> changeUnit('farenheit')}>
             <span>
             ºF
             </span>
@@ -21,46 +28,39 @@ export default function WeatherDetails(){
       </section>
 
       <section className='weekly-weather'>
-        <WeatherCard icon='clear-day'></WeatherCard>
-        <WeatherCard icon='clear-day'></WeatherCard>
-        <WeatherCard icon='clear-day'></WeatherCard>
-        <WeatherCard icon='clear-day'></WeatherCard>
-        <WeatherCard icon='clear-day'></WeatherCard>
-        <WeatherCard icon='clear-day'></WeatherCard>
+        {children}
       </section>
 
-
-      <h1>Today's highlights </h1>
+      <h2>Today's Highlights</h2>
       <section className='highlights'>
         <div className='highlights-wrapper'>
           <HighlightCard
             title = "Wind Status"
-            value = {2}
-            metric = "mph"
-            wind = "N"
+            value = {Math.round(data.data.currentConditions.windspeed)}
+            metric = "Km/hr"
+            wind = {data.data.currentConditions.winddir}
           />
           <HighlightCard
             title = "Humidity"
-            value = {66}
+            value = {Math.round(data.data.currentConditions.humidity)}
             metric = "%"
           />
           <HighlightCard
-            title = "Wind Status"
-            value = {2}
-            metric = "mph"
-            wind = "N"
+            title = "Cloud Cover"
+            value = {Math.round(data.data.currentConditions.cloudcover)}
+            metric = "%"
           />
           <HighlightCard
-            title = "Wind Status"
-            value = {2}
-            metric = "mph"
-            wind = "N"
+            title = "Air Pressure"
+            value = {Math.round(data.data.currentConditions.pressure)}
+            metric = "mb"
           />
         </div>
       </section>
 
+
+
       <footer className='a'> Coded by Dany Sanchez, for devchallenges.io </footer>
     </section>
-
   )
 }

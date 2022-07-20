@@ -5,10 +5,11 @@ export default function HighlightCard({title,value, metric, wind}){
     if(title==="Wind Status"){
       return(
         <div>
-          <span className="material-symbols-outlined ">
+          <span 
+          className="material-symbols-outlined" 
+          style= {{transform: 'rotate('+ wind +'deg)'}}>
           navigation
           </span>
-          <span>{wind}</span>       
         </div>
       )
     }
