@@ -4,6 +4,8 @@ const defaultCoordinates = {
   place : 'Coatzacoalcos, Ver' 
 }
 
+const apiKey = process.env.REACT_APP_REVERSE_LOCATION_API_KEY;
+
 export default function getLocation (update) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success, error);
@@ -13,7 +15,7 @@ export default function getLocation (update) {
 
     function success(location){
       //fetch to the reverse geocoding api to get the city
-      fetch(`https://api.bigdatacloud.net/data/reverse-geocode?latitude=${location.coords.latitude}&longitude=${location.coords.longitude}&key=bdc_fd2a19488aed4b40998d6eaac06f8296`)
+      fetch(`https://api.bigdatacloud.net/data/reverse-geocode?latitude=${location.coords.latitude}&longitude=${location.coords.longitude}&key=${apiKey}`)
         .then(response => response.json())
         .then(response => 
           {

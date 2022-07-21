@@ -21,6 +21,8 @@ export default function App() {
   const [futureWeather, setFutureWeather] = useState ([]);
   const [unit, setUnit] = useState("celsius");
 
+  const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+
   console.log(weatherData.data)
   
   //gets location at first render
@@ -35,7 +37,7 @@ export default function App() {
 
   //gets weather information when location changes
   useEffect(()=>{
-    fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location.latitude},${location.longitude}/?key=PHWR8E8M9Z5RPH3NTGPVMPJFP&unitGroup=metric`)
+    fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location.latitude},${location.longitude}/?key=${apiKey}&unitGroup=metric`)
       .then(response => response.json())
       .then(response =>{
         setWeatherData({
@@ -52,7 +54,7 @@ export default function App() {
       .catch(err =>{
         console.error(err)
       })
-  }, [location]);
+  }, [location, apiKey]);
 
   function updateLocationFromSearchPanel(data){
     setLocation({
