@@ -1,7 +1,21 @@
 function celsiusFarenheit(celsius){
-  return (celsius * 9/5) + 32
+  return (celsius * (9/5)) + 32
 }
 
-function farenheitCelsius (farenheit){
-  return (farenheit - 32) * 5/9
+export function setTemperature (temp, unit){
+
+  switch(unit){
+    case "celsius":
+      return {
+        temperature : temp,
+        unitIndicator : "ºC"
+      }
+    case "farenheit":
+      return {
+        temperature : Math.round(celsiusFarenheit(temp)),
+        unitIndicator : "ºF"
+      }
+    default:
+      return;
+  }
 }

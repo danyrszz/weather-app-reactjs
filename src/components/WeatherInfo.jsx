@@ -1,15 +1,20 @@
 import './WeatherInfo.css';
 import {getToday} from '../utils/getDate';
+import {setTemperature} from '../utils/tempConverter';
 
-export default function WeatherInfo ({place, weatherData}){
+export default function WeatherInfo ({place, weatherData, unit}){
+
+  let temp = Math.round(weatherData.currentConditions.temp);
+
+  const dataTemp = setTemperature (temp,unit);
 
   return (
     <section className="weather-info">
       <div>
         <span className='degrees'>
-          {Object.keys(weatherData).length === 0 ? '-' : Math.round(weatherData.currentConditions.temp) }
+          {Object.keys(weatherData).length === 0 ? '-' : dataTemp.temperature }
         </span> 
-        <span className='temp-unit'> ºC </span>
+        <span className='temp-unit'> {dataTemp.unitIndicator} </span>
       </div>
 
       <div className='general-information'>

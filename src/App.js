@@ -23,7 +23,7 @@ export default function App() {
 
   const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
-  console.log(weatherData.data)
+  console.log(weatherData.data);
   
   //gets location at first render
   useEffect(()=>{
@@ -69,14 +69,14 @@ export default function App() {
   }
 
   if(weatherData.data === undefined){
-    return "error"
+    return <div className='alternative-screen'> Fetching data... </div>
   }
 
   return (
     <div className='App'>
 
       {weatherData.loading ? (
-        <div> Loading </div>
+        <div className='alternative-screen'> Loading </div>
         ) : (
           <>
           <TodayWeather showSearchPanel={showSearchPanel} giveCoordinates={giveCoordinates}>      
@@ -84,6 +84,7 @@ export default function App() {
             <WeatherInfo 
               place = {location.place}
               weatherData = {weatherData.data}
+              unit = {unit}
             />
           </TodayWeather>
 
@@ -95,7 +96,7 @@ export default function App() {
 
           <WeatherDetails data={weatherData} tempUnit={unit} changeUnit = {(unit)=> setUnit(unit)}>
             {futureWeather.map((element, index)=>{
-              return <WeatherCard data = {element} key={index}></WeatherCard>
+              return <WeatherCard data = {element} key={index} unit={unit}></WeatherCard>
             })}
           </WeatherDetails>
             
