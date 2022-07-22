@@ -24,4 +24,4 @@ yarn-error.log*
 
 
  /components-structure.rtf
- .env
+ /.env
