@@ -60,7 +60,7 @@ export default function WeatherDetails({children, data, tempUnit, changeUnit}){
 
 
 
-      <footer className='a'> Coded by Dany Sanchez, for devchallenges.io </footer>
+      <footer className='a'> Coded by <a href="https://github.com/danyrszz">Dany Sanchez</a>, for devchallenges.io </footer>
     </section>
   )
 }

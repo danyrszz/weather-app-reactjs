@@ -47,6 +47,13 @@ footer{
   text-align: center;
   font-size: 0.8rem;
 }
+footer a{
+  text-decoration: none;
+  color: #8accf9;
+}
+footer a:hover{
+  text-decoration: underline;
+}
 
 @media screen and (max-width: 750px) {
   .weather-details{

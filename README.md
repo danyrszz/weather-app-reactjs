@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Country Quiz</h1>
+<h1 align="center">Weather App</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -36,19 +36,18 @@
 
 ## Overview
 
-![screenshot](/ss.png)
+![desktop design](/desktop.png)
+![mobile design](/mobile.png)
+![tablet look](/tablet.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
-
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+- I had a real good time developing this little app! i learned a little bit more of react, things like composition to avoid prop drilling (even though i think i need to practice this a little more), useref hook and some other things that i keep practicing whitin building this project.
 
 ### Built With
 
 - [React](https://reactjs.org/)
-
+- [Visual Crossing Weather](https://www.visualcrossing.com/weather-api)
+- [Geocoding api](https://open-meteo.com/en/docs/geocoding-api)
+- [Reverse geocoding api](https://www.bigdatacloud.com/packages/reverse-geocoding)
 
 ## Features
 
@@ -75,5 +74,5 @@ $ npm start
 
 ## Contact
 
-- GitHub [@your-username](https://github.com/danyrszz)
-- Twitter [@your-twitter](https://twitter.com/danyrszz)
+- GitHub [@danyrszz](https://github.com/danyrszz)
+- Twitter [@danyrszz](https://twitter.com/danyrszz)
