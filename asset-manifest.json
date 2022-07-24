@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/weather-app-reactjs/static/css/main.eef69fe0.css",
+    "main.js": "/weather-app-reactjs/static/js/main.2e3defff.js",
+    "static/media/clear-day.png": "/weather-app-reactjs/static/media/clear-day.6e4f36b6f663ff2d4d6a.png",
+    "static/media/clear-night.png": "/weather-app-reactjs/static/media/clear-night.6e4f36b6f663ff2d4d6a.png",
+    "static/media/partly-cloudy-day.png": "/weather-app-reactjs/static/media/partly-cloudy-day.edc43777fbbf36684278.png",
+    "static/media/partly-cloudy-night.png": "/weather-app-reactjs/static/media/partly-cloudy-night.edc43777fbbf36684278.png",
+    "static/media/Cloud-background.png": "/weather-app-reactjs/static/media/Cloud-background.f88244c26c2492e3c5f1.png",
+    "static/media/showers-day.png": "/weather-app-reactjs/static/media/showers-day.ea1e199aedb22fe4dd92.png",
+    "static/media/showers-night.png": "/weather-app-reactjs/static/media/showers-night.ea1e199aedb22fe4dd92.png",
+    "static/media/snow-showers-day.png": "/weather-app-reactjs/static/media/snow-showers-day.6ef96c5a2098a6b1a146.png",
+    "static/media/snow-showers-night.png": "/weather-app-reactjs/static/media/snow-showers-night.6ef96c5a2098a6b1a146.png",
+    "index.html": "/weather-app-reactjs/index.html",
+    "main.eef69fe0.css.map": "/weather-app-reactjs/static/css/main.eef69fe0.css.map",
+    "main.2e3defff.js.map": "/weather-app-reactjs/static/js/main.2e3defff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eef69fe0.css",
+    "static/js/main.2e3defff.js"
+  ]
+}
