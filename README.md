@@ -8,15 +8,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://danyrszz.github.io/country-quiz-react/">
+    <a href="https://danyrszz.github.io/weather-app-reactjs/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/danyrszz/country-quiz-react">
+    <a href="https://github.com/danyrszz/weather-app-reactjs">
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/Bu3G2irnaXmfwQ8sZkw8">
+    <a href="https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv">
       Challenge
     </a>
   </h3>
